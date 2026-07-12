@@ -1,3 +1,7 @@
+output "function_app_hybrid_connections_id" {
+  description = "Map of id values across all function_app_hybrid_connections, keyed the same as var.function_app_hybrid_connections"
+  value       = { for k, v in azurerm_function_app_hybrid_connection.function_app_hybrid_connections : k => v.id }
+}
 output "function_app_hybrid_connections_function_app_id" {
   description = "Map of function_app_id values across all function_app_hybrid_connections, keyed the same as var.function_app_hybrid_connections"
   value       = { for k, v in azurerm_function_app_hybrid_connection.function_app_hybrid_connections : k => v.function_app_id }

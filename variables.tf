@@ -15,7 +15,7 @@ EOT
     hostname        = string
     port            = number
     relay_id        = string
-    send_key_name   = optional(string) # Default: "RootManageSharedAccessKey"
+    send_key_name   = optional(string)
   }))
 }
 
